@@ -19,14 +19,14 @@ The DispatcherServlet, as any Servlet, needs to be declared and mapped according
          public void onStartup(ServletContext servletCxt) {
              // Load Spring web application configuration
              AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
-             ac.register(AppConfig.class);
+             ac.register(ApplicationConfig.class);
              ac.refresh();
      
              // Create and register the DispatcherServlet
-             DispatcherServlet servlet = new DispatcherServlet(ac);
-             ServletRegistration.Dynamic registration = servletCxt.addServlet("app", servlet);
+             DispatcherServlet dispatcherServlet = new DispatcherServlet(ac);
+             ServletRegistration.Dynamic registration = servletCxt.addServlet("dispatcherServlet", dispatcherServlet);
              registration.setLoadOnStartup(1);
-             registration.addMapping("/app/*");
+             registration.addMapping("/");
          }
     }
 
