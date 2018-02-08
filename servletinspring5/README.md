@@ -1,0 +1,1 @@
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar target\servlet-in-spring5-1.0.0-SNAPSHOT-war-exec.jar
