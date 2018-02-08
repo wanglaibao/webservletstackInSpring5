@@ -10,6 +10,7 @@
     <modules>
         <module>servletinspring5</module>
         <module>jspinspring5</module>
+        <module>springwebmvcautoconfig</module>
     </modules>
     <packaging>pom</packaging>
 
